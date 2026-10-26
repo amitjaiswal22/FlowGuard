@@ -25,7 +25,6 @@ This project intentionally uses core Java rather than Spring or third-party libr
 - [Tests](#tests)
 - [Benchmark and performance metrics](#benchmark-and-performance-metrics)
 - [Current limitations](#current-limitations)
-- [Resume description](#resume-description)
 
 ## Requirements
 
@@ -399,13 +398,3 @@ Use the result as an experiment, not a promise. Run it several times on the same
 - Thresholds arrive on each row; there is no configuration UI or threshold-management service.
 - Alerting is stateless: no rolling windows, rate-of-change rules, or historical baselines.
 - The benchmark is a simple local comparison, not a statistically rigorous load-testing framework.
-
-## Resume description
-
-**FlowGuard — Concurrent Operational Event Processor (Java 17)**
-
-- Built a dependency-free Java event-processing pipeline using `ThreadPoolExecutor`, bounded `ArrayBlockingQueue`, `ExecutorCompletionService`, and `CallerRunsPolicy` to process operational CSV feeds with backpressure.
-- Implemented duplicate suppression, per-event threshold alerts, malformed-record dead-lettering, alert grouping, and throughput reporting.
-- Added tests for concurrent processing, validation, duplicate handling, alert detection, and failure reporting.
-
-If you include a performance claim, first run the benchmark repeatedly on a representative data set and report your measured conditions and result.
